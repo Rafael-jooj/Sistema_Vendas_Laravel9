@@ -59,7 +59,7 @@
               </nav>
         </header>
         <div class="teste mt-5">
-            <p id="texto">texto teste</p>
+            <p id="texto">texto testasdfasdfe</p>
             <p id="num">20</p>
             <button onclick="printar()">imprimir</button>
         </div>
@@ -68,15 +68,5 @@
         <script src="js/logica.js"></script>
     </body>
 
-    {{-- <script>
-      const texto = document.getElementById('texto').textContent;
-      const number = document.getElementById('num').textContent;
-
-      console.log({texto, number});
-
-      function printar(){
-          console.log({texto, number});
-      }
-    </script> --}}
 </html>
 
