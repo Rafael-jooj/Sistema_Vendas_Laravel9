@@ -6,6 +6,10 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ProductController{
+    public function index(){
+        $products = Product::all();
+        return view('Products.list')->with('products', $products);
+    }
     public function create(){
         return view('Products.create');
     }

@@ -21,11 +21,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/seller', [SellersController::class, 'index']);
+
 Route::get('/create-sale', [SalesController::class, 'create']);
+Route::get('/list-sales', [SalesController::class, 'index']);
 Route::post('/create-sale', [SalesController::class, 'store']);
 
 Route::get('/create-product', [ProductController::class, 'create']);
+Route::get('/list-products', [ProductController::class, 'index']);
 Route::post('/create-product', [ProductController::class, 'store']);
 
 Route::get('/create-client', [ClientController::class, 'create']);
+Route::get('/list-clients', [ClientController::class, 'index']);
 Route::post('/create-client', [ClientController::class, 'store']);

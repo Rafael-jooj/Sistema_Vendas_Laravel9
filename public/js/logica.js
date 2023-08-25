@@ -10,7 +10,7 @@ function printar(){
 function addComponent() {
     const container = document.getElementById('components-container');
     const newComponent = `
-        <div class="row">
+        <div class="row mb-4">
             <div class="col">
                 <input type="number" name="product_id[]" class="form-control" placeholder="Product ID" aria-label="Product ID">
             </div>
@@ -21,7 +21,7 @@ function addComponent() {
                 <input type="number" name="price[]" class="form-control" placeholder="Preço" aria-label="Preço">
             </div>
             <div class="col">
-                <button onclick="removeComponent(this)">Remover</button>
+                <button  class="sale-campo" onclick="removeComponent(this)">Remover</button>
             </div>
         </div>
     `;

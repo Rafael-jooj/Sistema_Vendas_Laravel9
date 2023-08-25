@@ -6,6 +6,10 @@ use App\Models\Client;
 use Illuminate\Http\Request;
 
 class ClientController{
+    public function index(){
+        $clients = Client::all();
+        return view('Clients.list')->with('clients', $clients);
+    }
     public function create(){
         return view('Clients.create');
     }
