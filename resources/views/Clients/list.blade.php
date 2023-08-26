@@ -45,7 +45,7 @@
             </table>
         </div>
         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-          <h1>Criar Produto</h1>
+          <h1>Cadastrar Cliente</h1>
             <form action="" method="POST">
                 @csrf
                 <div class="mb-3">

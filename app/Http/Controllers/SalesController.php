@@ -11,10 +11,21 @@ use App\Models\Payment;
 use App\Models\Parcela;
 
 class SalesController{
-    public function index(){
-        $sales = Sale::all();
-        $products = Product::all();
-        $clients = Client::all();
+    public function index(Request $request){
+
+        $client_id = $request->input('client_id');
+
+        if($client_id){
+            $sales = Sale::where('client_id', $client_id)->get();
+
+            $products = Product::all();
+            $clients = Client::all();
+        }else{
+            $sales = Sale::all();
+            $products = Product::all();
+            $clients = Client::all();
+        }
+        
         return view('Sales.list')->with([
             'sales' => $sales,
             'products' => $products,
@@ -145,4 +156,5 @@ class SalesController{
 
         return redirect()->route('sales.index')->with('success', 'venda editada com sucesso');
     }
+    
 }

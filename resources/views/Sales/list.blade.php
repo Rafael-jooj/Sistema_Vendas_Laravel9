@@ -1,6 +1,7 @@
 <x-layout>
     <h2>Vendas</h2>
     @include('components/flash-message')
+    <div class="tab-content" id="myTabContent">
       <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item" role="presentation">
           <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Vendas Realizadas</button>
@@ -9,8 +10,14 @@
           <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Nova Venda</button>
         </li>
       </ul>
-      <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+            <div class="mt-3">
+              <form action="{{ route('sales.index')}}" method="GET" class="mb-3">
+                <label for="client_id">Filtrar por código do Cliente:</label>
+                <input type="text" id="client_id" name="client_id" class="form-control" placeholder="Digite o ID do Cliente">
+                <button type="submit" class="btn btn-primary mt-2">Filtrar</button>
+              </form>
+            </div>
             <table class="table table-striped">
                 <thead>
                   <tr>
