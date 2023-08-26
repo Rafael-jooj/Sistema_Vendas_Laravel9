@@ -18,9 +18,9 @@
 
 ![image](https://github.com/Rafael-jooj/Sistema_Vendas_Laravel9/assets/71270235/0d1f6838-fbc8-4336-af03-48f9a2f079a5)
 
-![image](https://github.com/Rafael-jooj/Sistema_Vendas_Laravel9/assets/71270235/68bb59e8-2aeb-4f32-bfa9-02c2a59bb075)
+![image](https://github.com/Rafael-jooj/Sistema_Vendas_Laravel9/assets/71270235/faf6c0c2-990f-45f3-889b-809e5dcae199)
 
-![image](https://github.com/Rafael-jooj/Sistema_Vendas_Laravel9/assets/71270235/5746ac2b-c386-4604-b1a0-db06d9dbee22)
+![image](https://github.com/Rafael-jooj/Sistema_Vendas_Laravel9/assets/71270235/9a1a53cf-e92b-43ee-a81f-8169923354cf)
 
 ![image](https://github.com/Rafael-jooj/Sistema_Vendas_Laravel9/assets/71270235/08ed2ca6-42b1-4661-a8a5-37698d8dd1ff)
 
