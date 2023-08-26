@@ -27,7 +27,7 @@ class ProductController{
         $products->price = $request->price;
         $products->save();
 
-        return redirect('/');
+        return redirect()->route('products.index');
     }
 
     public function update(Request $request, Product $product){

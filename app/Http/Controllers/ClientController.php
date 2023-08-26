@@ -20,7 +20,7 @@ class ClientController{
         $products->name = $request->name;
         $products->save();
 
-        return redirect('/');
+        return redirect()->route('clients.index');
     }
 
     public function show(Client $client){
@@ -41,7 +41,7 @@ class ClientController{
         $client = Client::find($id);
 
         if (!$client) {
-            return redirect()->route('sales.index')->with('error', 'Cliente não excluído.');
+            return redirect()->route('clients.index')->with('error', 'Cliente não excluído.');
         }
 
         $client->delete();
