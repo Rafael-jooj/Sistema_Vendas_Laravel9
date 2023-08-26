@@ -21,10 +21,6 @@ Route::get('/seller', [SellersController::class, 'index']);
 Route::get('/', [SalesController::class, 'index']);
 
 Route::resource('sales', SalesController::class);
-Route::get('/sales', [SalesController::class, 'index'])->name('sales.index');
-Route::get('/sales/filter/{client_id?}', [SalesController::class, 'filter'])->name('sales.filter');
-
-
 
 Route::resource('products', ProductController::class);
 
