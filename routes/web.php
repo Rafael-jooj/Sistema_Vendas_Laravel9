@@ -22,14 +22,22 @@ Route::get('/', function () {
 });
 Route::get('/seller', [SellersController::class, 'index']);
 
-Route::get('/create-sale', [SalesController::class, 'create']);
-Route::get('/list-sales', [SalesController::class, 'index']);
-Route::post('/create-sale', [SalesController::class, 'store']);
+// Route::get('/create-sale', [SalesController::class, 'create']);
+// Route::get('/list-sales', [SalesController::class, 'index']);
+// Route::get('/list-sales/{id}', [SalesController::class, 'show']);
+// Route::post('/create-sale', [SalesController::class, 'store']);
+
+Route::resource('sales', SalesController::class);
+
 
 Route::get('/create-product', [ProductController::class, 'create']);
 Route::get('/list-products', [ProductController::class, 'index']);
 Route::post('/create-product', [ProductController::class, 'store']);
 
+Route::resource('products', ProductController::class);
+
 Route::get('/create-client', [ClientController::class, 'create']);
 Route::get('/list-clients', [ClientController::class, 'index']);
 Route::post('/create-client', [ClientController::class, 'store']);
+
+Route::resource('client', clientController::class);

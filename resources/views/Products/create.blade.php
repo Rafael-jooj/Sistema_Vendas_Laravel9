@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="product-container">
+    {{-- <div class="product-container">
         <div class="product-card">
             <h1>Criar produto</h1>
 
@@ -17,5 +17,26 @@
                 <button class="campo" type="submit">Cadastrar</button>
             </form>
         </div>
-    </div>
+    </div> --}}
+
+    <h1>Criar Produto</h1>
+
+    @if(session('success'))
+        <div class="alert alert-success">{{ session('success') }}</div>
+    @endif
+
+    <form action="" method="POST">
+        @csrf
+        <div class="mb-3">
+            <label for="name" class="form-label">Nome do Produto</label>
+            <input type="text" name="name" id="name" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Preço do Produto</label>
+            <input type="number" name="price" id="price" class="form-control" step="0.01" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Criar Produto</button>
+    </form>
+
+    <a href="" class="btn btn-secondary mt-3">Voltar para a lista de produtos</a>
 </x-layout>

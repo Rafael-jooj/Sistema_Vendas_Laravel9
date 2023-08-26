@@ -1,33 +1,30 @@
-const texto = document.getElementById('texto').textContent;
-const number = document.getElementById('num').textContent;
+function addParcela() {
+    const totalValue = parseFloat(document.getElementById('total-price').value);
+    const parcelas = parseInt(document.getElementById('quntityParcelas').value);
 
-// console.log({texto, number});
+    if (isNaN(totalValue) || isNaN(parcelas)) {
+        alert('Informe um valor total e a quantidade de parcelas válidos.');
+        return;
+    }
 
-function printar(){
-    console.log({texto, number});
-}
+    const parcelaContainer = document.getElementById('parcela-container');
+    parcelaContainer.innerHTML = ''; // Limpa as parcelas existentes
 
-function addComponent() {
-    const container = document.getElementById('components-container');
-    const newComponent = `
-        <div class="row mb-4">
-            <div class="col">
-                <input type="number" name="product_id[]" class="form-control" placeholder="Product ID" aria-label="Product ID">
-            </div>
-            <div class="col">
-                <input type="number" name="quantity[]" class="form-control" placeholder="Quantidade" aria-label="Quantidade">
-            </div>
-            <div class="col">
-                <input type="number" name="price[]" class="form-control" placeholder="Preço" aria-label="Preço">
-            </div>
-            <div class="col">
-                <button  class="sale-campo" onclick="removeComponent(this)">Remover</button>
-            </div>
-        </div>
-    `;
-    container.insertAdjacentHTML('beforeend', newComponent);
-}
+    const valorParcela = totalValue / parcelas;
+    const dataAtual = new Date();
+    
+    for (let i = 1; i <= parcelas; i++) {
+        const dataParcela = new Date(dataAtual);
+        dataParcela.setMonth(dataParcela.getMonth() + i);
 
-function removeComponent(button) {
-    button.closest('.row').remove();
+        const parcelaComponent = `
+            <div class="row gap-3 mb-3">
+                <label>Parcela ${i}</label>
+                <input type="date" class="form-control w-25" value="${dataParcela.toISOString().substr(0, 10)}">
+                <input type="text" class="form-control w-25" value="${valorParcela.toFixed(2)}">
+            </div>
+        `;
+
+        parcelaContainer.insertAdjacentHTML('beforeend', parcelaComponent);
+    }
 }
