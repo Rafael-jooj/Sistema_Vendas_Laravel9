@@ -1,6 +1,6 @@
 function addParcela() {
     const totalValue = parseFloat(document.getElementById('total-price').value);
-    const parcelas = parseInt(document.getElementById('quntityParcelas').value);
+    const parcelas = parseInt(document.getElementById('quantityParcelas').value);
 
     if (isNaN(totalValue) || isNaN(parcelas)) {
         alert('Informe um valor total e a quantidade de parcelas válidos.');
@@ -8,7 +8,7 @@ function addParcela() {
     }
 
     const parcelaContainer = document.getElementById('parcela-container');
-    parcelaContainer.innerHTML = ''; // Limpa as parcelas existentes
+    parcelaContainer.innerHTML = '';
 
     const valorParcela = totalValue / parcelas;
     const dataAtual = new Date();
@@ -20,8 +20,8 @@ function addParcela() {
         const parcelaComponent = `
             <div class="row gap-3 mb-3">
                 <label>Parcela ${i}</label>
-                <input type="date" class="form-control w-25" value="${dataParcela.toISOString().substr(0, 10)}">
-                <input type="text" class="form-control w-25" value="${valorParcela.toFixed(2)}">
+                <input type="date"  name="data_parcela[]" class="form-control w-25" value="${dataParcela.toISOString().substr(0, 10)}">
+                <input type="text" name="price_parcela[]" class="form-control w-25" value="${valorParcela.toFixed(2)}">
             </div>
         `;
 

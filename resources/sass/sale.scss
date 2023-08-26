@@ -1,8 +1,6 @@
 .sale-container{
     height: 100%;
     width: 100%;
-    padding-left: 10%;
-    padding-right: 10%;
     padding-top: 3%;
     padding-bottom: 5%;
 }
@@ -19,7 +17,7 @@
 }
 .sale-buttons{
     display: flex;
-    justify-content: center;
+    justify-content: start;
     gap: 20px;
 }
 .sale-prod{

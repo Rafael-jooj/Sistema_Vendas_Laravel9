@@ -40,4 +40,6 @@ Route::get('/create-client', [ClientController::class, 'create']);
 Route::get('/list-clients', [ClientController::class, 'index']);
 Route::post('/create-client', [ClientController::class, 'store']);
 
+Route::resource('clients', ClientController::class);
+
 Route::resource('client', clientController::class);
