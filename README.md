@@ -1,4 +1,18 @@
-# Sistema de Vendas online utilizando Laravel 9
+# Sistema de Vendas online utilizando Laravel 9.5, PHP 8.0, composer 2.5.8
+
+## Comentário
+
+- Criar arquivo .env e configurar conexão mysql:
+  
+- Executar 'composer install'
+
+- php artisan migrate ('Para criar tabelas no banco')
+
+- php artisan serve ('Abrir servidor localhost')
+
+- npm run build (build de arquivos)
+
+- npm run dev (hot reload vite)
 
 ## Demostração
 
